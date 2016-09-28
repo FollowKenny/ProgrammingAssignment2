@@ -34,6 +34,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
     xinv <- x$gi()
     if (is.null(xinv)) {
+        message("first computation of inverse for current matrix")
         x$si(x$gm())
         xinv <- x$gi()
     }
